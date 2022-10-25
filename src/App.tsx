@@ -1,5 +1,4 @@
-import { FC } from "react";
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import PublicRoute from "./routes/PublicRoute";
 
 /* Components */

@@ -1,0 +1,10 @@
+@import "./variables.scss";
+
+h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 90px;
+    color: $secondary;
+}
