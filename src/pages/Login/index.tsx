@@ -1,7 +1,8 @@
+import "./styles.scss";
 import { FC } from "react";
 
 const Login: FC = () => {
-    return <div>oi</div>;
+    return <div className="login-container">oi</div>;
 };
 
 export default Login;
