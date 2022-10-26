@@ -1,21 +1,43 @@
 @import "../../assets/scss/variables.scss";
 
-.base {
+::-webkit-input-placeholder {
+    color: $secondary;
+    padding-left: 12px;
+}
+
+.base-input {
     border: 1px solid $white;
     border-radius: 50px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    height: 60px;
     color: $secondary;
-}
+    background: $middle-gray;
+    display: flex;
+    align-items: center;
 
-.base-input {
-    border: none;
-    height: 100% !important;
+    input {
+        color: $secondary;
+        border: none;
+        height: 95%;
+        width: 100%;
+        margin-left: 5px;
+        border-radius: 50px;
+        border: none;
+        background: $middle-gray;
+        &:focus {
+            outline: none;
+        }
+    }
 }
 
 .icon-input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    img {
+        padding-right: 20px;
+    }
 }

@@ -20,13 +20,14 @@ const LoginSection: FC = () => (
         <CustomInput
             id="input-user-icon"
             inputType="icon-input"
-            placeholder="User"
+            placeholder="Usuário"
             icon={Icon.userIcon}
         />
         <CustomInput
             id="input-password-icon"
             inputType="icon-input"
-            placeholder="Password"
+            placeholder="Senha"
+            height={25}
             icon={Icon.passwordIcon}
         />
     </div>

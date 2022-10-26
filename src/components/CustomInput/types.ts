@@ -3,4 +3,5 @@ export interface InputType {
     id: string;
     placeholder: string;
     icon: string;
+    height?: number;
 }
