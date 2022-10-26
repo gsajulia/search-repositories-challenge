@@ -1,0 +1,17 @@
+@import "../../assets/scss/variables.scss";
+
+.submit {
+    background: linear-gradient(
+        90deg,
+        $orange-primary 0%,
+        $orange-secondary 100%
+    );
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 50px;
+    span {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+    }
+}

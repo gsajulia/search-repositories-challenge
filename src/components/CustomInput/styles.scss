@@ -1,0 +1,20 @@
+@import "../../assets/scss/variables.scss";
+
+.base {
+    border: 1px solid $white;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $secondary;
+
+    input {
+        border: none;
+    }
+}
+
+.icon-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

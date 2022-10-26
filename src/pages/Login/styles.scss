@@ -1,7 +1,45 @@
 @import "../../assets/scss/variables.scss";
 
 .login-container {
-    background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%);
+    background: linear-gradient(180deg, $dark-gray 0%, $primary 100%);
     color: $secondary;
     box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow-y: hidden;
+
+    .login-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15% 0;
+        height: 100vh;
+
+        .header-section {
+            margin-bottom: 25%;
+        }
+
+        .login-section {
+            margin-bottom: 22%;
+        }
+    }
+
+    section {
+        width: 50%;
+        height: 100%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.banner-img {
+    height: 100vh;
+}
+
+.compass-logo {
+    padding-left: 10%;
+    position: absolute;
 }
