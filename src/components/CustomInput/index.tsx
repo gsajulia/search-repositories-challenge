@@ -9,7 +9,7 @@ const CustomInput: FC<InputType> = ({
 }) => {
     return (
         <div className={`base ${inputType}`}>
-            <input id={id} placeholder={placeholder} />
+            <input className="base-input" id={id} placeholder={placeholder} />
             <img src={icon} alt="Input icon" />
         </div>
     );

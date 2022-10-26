@@ -9,22 +9,6 @@
     height: 100vh;
     overflow-y: hidden;
 
-    .login-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 15% 0;
-        height: 100vh;
-
-        .header-section {
-            margin-bottom: 25%;
-        }
-
-        .login-section {
-            margin-bottom: 22%;
-        }
-    }
-
     section {
         width: 50%;
         height: 100%;
@@ -37,9 +21,37 @@
 
 .banner-img {
     height: 100vh;
+    width: 100%;
 }
 
 .compass-logo {
-    padding-left: 10%;
     position: absolute;
+    left: 75%;
+    transform: translate(-50%, 0);
+}
+
+.login-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15% 0;
+    height: 100vh;
+
+    .content {
+        max-width: 330px;
+    }
+
+    .header-section {
+        margin-bottom: 25%;
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .login-section {
+        margin-bottom: 22%;
+    }
 }

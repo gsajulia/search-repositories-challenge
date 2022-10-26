@@ -16,7 +16,7 @@ const Header: FC = () => (
 
 const LoginSection: FC = () => (
     <div className="login-section">
-        <h4>Login</h4>
+        <h5>Login</h5>
         <CustomInput
             id="input-user-icon"
             inputType="icon-input"
@@ -36,7 +36,7 @@ const Login: FC = () => {
     return (
         <div className="login-container">
             <section className="login-info">
-                <div>
+                <div className="content">
                     <Header />
                     <LoginSection />
                     <CustomButton buttonType="submit" label="Continuar" />
@@ -44,18 +44,15 @@ const Login: FC = () => {
             </section>
 
             <section>
-                <img
-                    src={Icon.compassLogo}
-                    alt="Compass Logo"
-                    className="compass-logo"
-                />
-                <div>
-                    <img
-                        src={Image.loginBanner}
-                        alt="Banner with colorful notebook"
-                        className="banner-img"
-                    />
+                <div className="compass-logo">
+                    <img src={Icon.compassLogo} alt="Compass Logo" />
                 </div>
+
+                <img
+                    src={Image.loginBanner}
+                    alt="Banner with colorful notebook"
+                    className="banner-img"
+                />
             </section>
         </div>
     );
