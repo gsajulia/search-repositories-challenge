@@ -3,6 +3,7 @@ import PublicRoute from "./routes/PublicRoute";
 
 /* Components */
 import Login from "./pages/Login";
+import Home from "./pages/Home";
 
 const App = () => {
     return (
@@ -12,6 +13,14 @@ const App = () => {
                 element={
                     <PublicRoute>
                         <Login />
+                    </PublicRoute>
+                }
+            />
+            <Route
+                path="/home"
+                element={
+                    <PublicRoute>
+                        <Home />
                     </PublicRoute>
                 }
             />
