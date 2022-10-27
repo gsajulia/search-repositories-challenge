@@ -6,49 +6,9 @@ import { useState, FC, ChangeEvent } from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
-
-import { LoginParam } from "./type";
-
-export const Header: FC = () => (
-    <div className="header-section">
-        <h3>Olá,</h3>
-        <p>Para continuar navegando de forma segura, efetue o login na rede.</p>
-    </div>
-);
-
-export const LoginSection: FC<LoginParam> = ({ onChange, login, error }) => (
-    <div className="login-section">
-        <h5>Login</h5>
-        <CustomInput
-            id="input-user-icon"
-            inputType="icon-input"
-            placeholder="Usuário"
-            value={login.user}
-            onChange={onChange}
-            icon={Icon.userIcon}
-            error={error ? "login-error" : ""}
-        />
-        <CustomInput
-            id="input-password-icon"
-            inputType="icon-input"
-            placeholder="Senha"
-            type="password"
-            value={login.password}
-            onChange={onChange}
-            height={25}
-            icon={Icon.passwordIcon}
-            error={error ? "login-error" : ""}
-        />
-
-        {error && (
-            <div className="login-error-message">
-                Ops, usuário ou senha inválidos. Tente novamente!
-            </div>
-        )}
-    </div>
-);
+import Header from "./Header";
+import FormSection from "./FormSection";
 
 const Login: FC = () => {
     const [login, setLogin] = useState({ user: "", password: "" });
@@ -76,7 +36,7 @@ const Login: FC = () => {
             <section className="login-info">
                 <div className="content">
                     <Header />
-                    <LoginSection
+                    <FormSection
                         error={error}
                         onChange={onChangeInput}
                         login={login}
