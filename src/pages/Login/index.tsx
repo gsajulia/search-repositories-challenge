@@ -11,14 +11,14 @@ import CustomButton from "../../components/CustomButton";
 
 import { LoginParam } from "./type";
 
-const Header: FC = () => (
+export const Header: FC = () => (
     <div className="header-section">
         <h3>Olá,</h3>
         <p>Para continuar navegando de forma segura, efetue o login na rede.</p>
     </div>
 );
 
-const LoginSection: FC<LoginParam> = ({ onChange, login, error }) => (
+export const LoginSection: FC<LoginParam> = ({ onChange, login, error }) => (
     <div className="login-section">
         <h5>Login</h5>
         <CustomInput
@@ -28,7 +28,7 @@ const LoginSection: FC<LoginParam> = ({ onChange, login, error }) => (
             value={login.user}
             onChange={onChange}
             icon={Icon.userIcon}
-            error={error && "login-error"}
+            error={error ? "login-error" : ""}
         />
         <CustomInput
             id="input-password-icon"
@@ -39,7 +39,7 @@ const LoginSection: FC<LoginParam> = ({ onChange, login, error }) => (
             onChange={onChange}
             height={25}
             icon={Icon.passwordIcon}
-            error={error && "login-error"}
+            error={error ? "login-error" : ""}
         />
 
         {error && (
