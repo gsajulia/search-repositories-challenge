@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./styles.scss";
 
 import * as Icon from "../../../assets/icons";
 import CustomInput from "../../../components/CustomInput";

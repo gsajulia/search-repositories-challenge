@@ -1,4 +1,5 @@
 import { FC } from "react";
+import "./styles.scss";
 
 const Header: FC = () => (
     <div className="header-section">

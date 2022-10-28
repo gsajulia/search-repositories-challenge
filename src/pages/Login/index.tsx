@@ -33,6 +33,9 @@ const Login: FC = () => {
 
     return (
         <div className="login-container">
+            <div className="mobile-logo">
+                <img src={Icon.compassLogo} alt="Compass Logo" />
+            </div>
             <section className="login-info">
                 <div className="content">
                     <Header />
@@ -49,7 +52,7 @@ const Login: FC = () => {
                 </div>
             </section>
 
-            <section>
+            <section className="mobile-banner-section">
                 <div className="compass-logo">
                     <img src={Icon.compassLogo} alt="Compass Logo" />
                 </div>
