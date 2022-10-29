@@ -4,11 +4,17 @@ import "./styles.scss";
 
 const Header: FC = () => {
     return (
-        <div className="header-container">
+        <header className="header-container">
             <img src={I.compassLogoBlack} alt="Compass Logo" />
-            <div>time</div>
-            <div>climate</div>
-        </div>
+            <h1>11:26</h1>
+            <div>
+                <div className="climate-text">Passo Fundo - RS</div>
+                <div className="climate-container">
+                    <img src={I.climate} alt="Compass Logo" />
+                    <div className="climate-text-number">22º</div>
+                </div>
+            </div>
+        </header>
     );
 };
 
