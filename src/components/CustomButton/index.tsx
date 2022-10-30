@@ -7,9 +7,11 @@ const CustomButton: FC<ButtonType> = ({
     children,
     type = "button",
     onClick,
+    width = "100%",
 }) => {
     return (
         <button
+            style={{ width: width }}
             className={`base-button ${buttonType}`}
             type={type}
             onClick={onClick}

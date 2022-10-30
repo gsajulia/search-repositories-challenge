@@ -4,6 +4,7 @@ import "./styles.scss";
 import * as I from "../../assets/icons";
 import BannerSectionLayout from "../../components/BannerSectionLayout";
 import CustomInput from "../../components/CustomInput";
+import CustomButton from "../../components/CustomButton";
 
 const Search: FC = () => {
     const [search, setSearch] = useState("");
@@ -31,13 +32,19 @@ const Search: FC = () => {
                             </p>
                         </div>
 
-                        <div>
+                        <div className="search-section">
                             <CustomInput
                                 id="input-search-repositories"
                                 value={search}
                                 onChange={onChangeInput}
                                 placeholder="Ex.: Thauany"
                             />
+                            <CustomButton buttonType="submit" width={"200px"}>
+                                <div className="search-button-content">
+                                    Buscar
+                                    <img src={I.search} alt="search icon" />
+                                </div>
+                            </CustomButton>
                         </div>
 
                         <div></div>
