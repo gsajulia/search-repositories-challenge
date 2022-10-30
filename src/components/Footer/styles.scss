@@ -2,4 +2,88 @@
 
 .footer-container {
     background: linear-gradient(180deg, $dark-gray 0%, $primary 100%);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 35px;
+
+    a {
+        text-decoration: none;
+    }
+
+    .divider {
+        border-left: 1px solid $secondary;
+        margin: 18px 35px;
+    }
+
+    .begin-section {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .end-section {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        .refresh-text {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 34px;
+            padding-left: 4vw;
+
+            .seconds-text {
+                font-size: 48px;
+                line-height: 72px;
+                font-weight: 700;
+                font-size: 12px;
+            }
+    }
+
+        .button-links-container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            cursor: pointer;
+
+            a {
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            .primary-link {
+                width: 131px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    font-weight: 700;
+                    color: $white;
+                }
+            }
+            
+            .secondary-link {
+                background: $white;
+                width: 131px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    max-width: 50px;
+                    text-align: center;
+                    font-weight: 400;
+                    color: $orange-secondary;
+                }
+            }
+        }
 }
+}
+
