@@ -1,0 +1,52 @@
+@import "../../../assets/scss/variables.scss";
+.repositories-table-row {
+    border-collapse: collapse;
+    border-bottom: 1px solid $middle-light-gray;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    .left-column {
+        text-align: left;
+        width: 200px;
+        .title {
+            color: $white;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 27px;
+        }
+        .subtitle {
+            color: $middle-light-gray;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .right-column {
+        text-align: right;
+        max-width: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 24px;
+            padding-right: 24px;
+        }
+
+        span {
+            padding: 0 10px;
+        }
+    }
+}
+
+.repositories-table-row:last-child {
+    border-bottom: none;
+    margin-bottom: none;
+    .left-column {
+        .subtitle:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

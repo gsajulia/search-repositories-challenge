@@ -1,0 +1,18 @@
+@import "../../assets/scss/variables.scss";
+
+.repositories-table-container {
+    position: relative;
+    width: 100%;
+    max-width: 1030px;
+    .repositories-table {
+        background: $table-color;
+        width: 100%;
+        .repositories-table-content {
+            padding: 22px;
+        }
+    }
+
+    .repositories-table-tabs {
+        background: $table-color;
+    }
+}

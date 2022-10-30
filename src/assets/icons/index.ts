@@ -5,6 +5,8 @@ import compassLogoBlack from "./compass-logo-black.svg";
 import climate from "./cloudy.svg";
 import uolBall from "./uol-ball.svg";
 import search from "./search.svg";
+import star from "./star.svg";
+import goldenStar from "./golden-star.svg";
 
 export {
     userIcon,
@@ -14,4 +16,6 @@ export {
     climate,
     uolBall,
     search,
+    star,
+    goldenStar,
 };

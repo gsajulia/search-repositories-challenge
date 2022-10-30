@@ -3,4 +3,5 @@ export interface UserCardProps {
     description: string;
     img: string;
     id?: string;
+    userUrl: string;
 }

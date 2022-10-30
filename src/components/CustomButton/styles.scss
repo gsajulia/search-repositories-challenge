@@ -21,11 +21,16 @@
     );
 }
 
-.see-more-button {
+.see-more-button,
+.see-more-button-rounded {
     background: linear-gradient(90deg, $blue 0%, $dark-blue 100%);
     box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     text-transform: uppercase;
     color: $white;
     height: 47px;
+}
+
+.see-more-button-rounded {
+    border-radius: 50px;
 }

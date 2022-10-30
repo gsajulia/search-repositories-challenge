@@ -1,4 +1,4 @@
-import { FC, ChangeEvent, useState, useEffect } from "react";
+import { FC, ChangeEvent, useState } from "react";
 
 import "./styles.scss";
 import * as I from "../../assets/icons";
@@ -10,11 +10,11 @@ import CustomButton from "../../components/CustomButton";
 import { getUserBySearch } from "../../api/Users";
 import UserCard from "../../components/UserCard";
 
-import { UserCardProps } from "../../components/UserCard/types";
+import { UserType } from "./types";
 
 const Search: FC = () => {
     const [search, setSearch] = useState("");
-    const [users, setUsers] = useState<Array<UserCardProps> | [] | null>([]);
+    const [users, setUsers] = useState<Array<UserType> | [] | null>([]);
 
     const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
@@ -92,12 +92,13 @@ const Search: FC = () => {
                                         name,
                                         description,
                                         img,
-                                    }: UserCardProps) => (
+                                    }: UserType) => (
                                         <UserCard
                                             key={id}
                                             name={name}
                                             description={description}
                                             img={img}
+                                            userUrl={search}
                                         />
                                     )
                                 )

@@ -1,0 +1,18 @@
+@import "../../assets/scss/variables.scss";
+
+.user-info-container {
+    background: linear-gradient(180deg, $dark-gray 0%, $primary 100%);
+    box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
+    min-height: 100vh;
+    padding: 10%;
+
+    .user-info-button-container {
+        padding-bottom: 40px;
+    }
+    .user-info-content {
+        background: $primary-middle;
+        display: flex;
+        flex-direction: row;
+        padding: 5%;
+    }
+}

@@ -5,6 +5,7 @@ import PublicRoute from "./routes/PublicRoute";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
+import UserInfo from "./pages/UserInfo";
 
 const App = () => {
     return (
@@ -30,6 +31,14 @@ const App = () => {
                 element={
                     <PublicRoute>
                         <Search />
+                    </PublicRoute>
+                }
+            />
+            <Route
+                path="/user-info/:username"
+                element={
+                    <PublicRoute>
+                        <UserInfo />
                     </PublicRoute>
                 }
             />
