@@ -1,20 +1,49 @@
 @import "../../assets/scss/variables.scss";
 
 .home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: calc(100vh - 190px);
+    color: $white;
 
-  background: linear-gradient(105.96deg, $light-sand 0%, $white 97.86%);
+    background: linear-gradient(105.96deg, $light-sand 0%, $white 97.86%);
+}
+
+.mission {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-right: 5%;
+    .small-mission-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 54px;
+        color: $dark-orange;
+    }
+
+    .mission-title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 65px;
+        color: $dark-orange;
+    }
+
+    .mission-subtitle {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 26px;
+        color: $primary-light;
+    }
 }
 
 .home-content {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 
-  img {
-    height: 40%;
-  }
+    img {
+        height: 40%;
+    }
 }

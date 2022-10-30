@@ -6,6 +6,8 @@
     justify-content: space-between;
     color: $primary-light;
     padding: 25px 25px 0 25px;
+    height: 165px;
+    background: linear-gradient(105.96deg, $light-sand 0%, $white 97.86%);
 }
 
 .climate-container {
@@ -20,14 +22,14 @@
 .climate-text {
     font-weight: 400;
     font-size: 14px;
-    line-height: 21px;
     text-align: end;
+    padding-right: 10px;
 }
 
 .climate-text-number {
     font-weight: 700;
     font-size: 48px;
-    line-height: 72px;
+    line-height: 52px;
 }
 
 .header-time {
@@ -38,31 +40,4 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.mission {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .small-mission-title {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 54px;
-        color: $dark-orange;
-    }
-
-    .mission-title {
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 65px;
-        color: $dark-orange;
-    }
-
-    .mission-subtitle {
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 26px;
-        color: $primary-light;
-    }
 }

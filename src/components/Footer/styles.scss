@@ -39,12 +39,16 @@
             padding-left: 4vw;
 
             .seconds-text {
+                text-align: center;
                 font-size: 48px;
-                line-height: 72px;
+                line-height: 28px;
                 font-weight: 700;
-                font-size: 12px;
+                div {
+                    font-size: 12px;
+                    font-weight: 400;
+                }
             }
-    }
+        }
 
         .button-links-container {
             display: flex;
@@ -68,7 +72,7 @@
                     color: $white;
                 }
             }
-            
+
             .secondary-link {
                 background: $white;
                 width: 131px;
@@ -84,6 +88,5 @@
                 }
             }
         }
+    }
 }
-}
-
