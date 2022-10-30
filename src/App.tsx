@@ -4,6 +4,7 @@ import PublicRoute from "./routes/PublicRoute";
 /* Components */
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Search from "./pages/Search";
 
 const App = () => {
     return (
@@ -21,6 +22,14 @@ const App = () => {
                 element={
                     <PublicRoute>
                         <Home />
+                    </PublicRoute>
+                }
+            />
+            <Route
+                path="/search"
+                element={
+                    <PublicRoute>
+                        <Search />
                     </PublicRoute>
                 }
             />

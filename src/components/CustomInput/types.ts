@@ -1,9 +1,9 @@
 import { ChangeEvent } from "react";
 export interface InputType {
-    inputType: string;
+    inputType?: string;
     id: string;
-    placeholder: string;
-    icon: string;
+    placeholder?: string;
+    icon?: string;
     height?: number;
     type?: string;
     value: string;

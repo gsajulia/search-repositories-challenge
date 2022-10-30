@@ -2,98 +2,19 @@
 
 .login-container {
     background: linear-gradient(180deg, $dark-gray 0%, $primary 100%);
-    color: $secondary;
     box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
+}
+
+.login-left-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
-    overflow-y: hidden;
-
-    .login-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-
-        .content {
-            display: flex;
-            max-width: 330px;
-            height: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
-    }
-
-    section {
-        width: 50%;
-        height: 100%;
-    }
-
-    img {
-        max-width: 100%;
-    }
-}
-
-.banner-img {
-    height: 100vh;
-    width: 100%;
-}
-
-.compass-logo {
-    position: absolute;
-    left: 75%;
-    transform: translate(-50%, 0);
-}
-
-.mobile-logo {
-    display: none;
-}
-
-@media (min-width: $breakpoint-wide-screen) {
-    .login-container {
-        .login-info {
-            .content {
-                max-width: 65%;
-            }
-        }
-    }
 }
 
 @media (max-width: $breakpoint-tablet) {
     .login-container {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-
-        section {
-            width: 70%;
-        }
-
-        .login-info {
-            .content {
-                padding-bottom: 20%;
-                justify-content: center;
-                gap: 10%;
-                max-width: unset;
-            }
-        }
-    }
-
-    .mobile-banner-section {
-        display: none;
-        width: 0 !important;
-    }
-
-    .mobile-logo {
-        width: 349px;
-        padding-top: 33px;
-        display: inline;
-    }
-}
-
-@media (max-width: $breakpoint-mobile) {
-    .mobile-logo {
-        width: 270px;
+        padding: 0 20%;
     }
 }

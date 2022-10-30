@@ -4,7 +4,7 @@ import { ButtonType } from "./types";
 
 const CustomButton: FC<ButtonType> = ({
     buttonType = "",
-    label,
+    children,
     type = "button",
     onClick,
 }) => {
@@ -14,7 +14,7 @@ const CustomButton: FC<ButtonType> = ({
             type={type}
             onClick={onClick}
         >
-            {label}
+            {children}
         </button>
     );
 };

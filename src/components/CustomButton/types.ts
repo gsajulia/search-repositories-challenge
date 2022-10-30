@@ -1,6 +1,6 @@
 export interface ButtonType {
     buttonType: string;
-    label: string;
+    children: JSX.Element;
     type?: "button" | "submit" | "reset";
     onClick?: () => void;
 }

@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     padding-left: 12px;
+    width: 100%;
 
     input[type="password"]:not(:placeholder-shown) {
         font-size: 30px;

@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/CustomButton";
 import Header from "./Header";
 import FormSection from "./FormSection";
+import BannerSectionLayout from "../../components/BannerSectionLayout";
 
 const Login: FC = () => {
     const [login, setLogin] = useState({ user: "", password: "" });
@@ -33,36 +34,21 @@ const Login: FC = () => {
 
     return (
         <div className="login-container">
-            <div className="mobile-logo">
-                <img src={Icon.compassLogo} alt="Compass Logo" />
-            </div>
-            <section className="login-info">
-                <div className="content">
-                    <Header />
-                    <FormSection
-                        error={error}
-                        onChange={onChangeInput}
-                        login={login}
-                    />
-                    <CustomButton
-                        buttonType="submit"
-                        label="Continuar"
-                        onClick={onSubmit}
-                    />
+            <BannerSectionLayout>
+                <div className="login-left-section">
+                    <div className="content">
+                        <Header />
+                        <FormSection
+                            error={error}
+                            onChange={onChangeInput}
+                            login={login}
+                        />
+                        <CustomButton buttonType="submit" onClick={onSubmit}>
+                            <>Continuar</>
+                        </CustomButton>
+                    </div>
                 </div>
-            </section>
-
-            <section className="mobile-banner-section">
-                <div className="compass-logo">
-                    <img src={Icon.compassLogo} alt="Compass Logo" />
-                </div>
-
-                <img
-                    src={Image.loginBanner}
-                    alt="Banner with colorful notebook"
-                    className="banner-img"
-                />
-            </section>
+            </BannerSectionLayout>
         </div>
     );
 };
