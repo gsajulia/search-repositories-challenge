@@ -3,11 +3,11 @@
 .home-container {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    min-height: calc(100vh - 190px);
+    justify-content: space-between;
     color: $white;
-
+    overflow-y: hidden;
     background: linear-gradient(105.96deg, $light-sand 0%, $white 97.86%);
+    height: 100vh;
 }
 
 .mission {
@@ -45,5 +45,16 @@
 
     img {
         height: 40%;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: $breakpoint-small-screen) {
+    .home-mobile {
+        .mission {
+            display: none;
+            width: 0;
+            height: 0;
+        }
     }
 }

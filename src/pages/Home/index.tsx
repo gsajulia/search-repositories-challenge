@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import MobileFooter from "../../components/Footer/MobileFooter";
 
 import "./styles.scss";
 import * as I from "../../assets/icons";
@@ -19,9 +20,9 @@ const mission = [
 ];
 const Home: FC = () => {
     return (
-        <>
+        <div className="home-container home-mobile">
             <Header />
-            <div className="home-container">
+            <div>
                 <div className="home-content">
                     <img src={I.uolBall} alt="oul ball" />
                     <div className="mission">
@@ -44,8 +45,9 @@ const Home: FC = () => {
                     </div>
                 </div>
                 <Footer />
+                <MobileFooter />
             </div>
-        </>
+        </div>
     );
 };
 

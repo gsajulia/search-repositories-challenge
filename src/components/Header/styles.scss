@@ -7,37 +7,65 @@
     color: $primary-light;
     padding: 25px 25px 0 25px;
     height: 165px;
-    background: linear-gradient(105.96deg, $light-sand 0%, $white 97.86%);
+
+    .header-compass-logo {
+        height: 86px;
+        width: 300px;
+    }
+
+    .header-time {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: $primary-light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .climate-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    gap: 15px;
-    min-width: 200px;
+    margin-top: 28px;
+
+    .climate-content-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 15px;
+        min-width: 200px;
+    }
+
+    .climate-text {
+        font-weight: 400;
+        font-size: 14px;
+        text-align: end;
+        padding-right: 10px;
+    }
+
+    .climate-text-number {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 52px;
+    }
 }
 
-.climate-text {
-    font-weight: 400;
-    font-size: 14px;
-    text-align: end;
-    padding-right: 10px;
-}
+@media (max-width: $breakpoint-tablet) {
+    .home-mobile {
+        padding: 0;
 
-.climate-text-number {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 52px;
-}
+        .climate-content-container {
+            min-width: unset;
+        }
+        .header-time {
+            display: none;
+            width: 0;
+            height: 0;
+        }
 
-.header-time {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: $primary-light;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        .header-compass-logo {
+            height: 86px;
+            width: 248px;
+        }
+    }
 }
