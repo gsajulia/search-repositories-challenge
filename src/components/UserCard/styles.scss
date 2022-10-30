@@ -1,4 +1,46 @@
 @import "../../assets/scss/variables.scss";
 
 .user-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $light-gray;
+    padding: 33px;
+    .user-info {
+        display: flex;
+        flex-direction: row;
+
+        img {
+            width: 93px;
+            height: 93px;
+            border-radius: 50%;
+        }
+
+        .user-card-title {
+            color: $white;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            margin-left: 23px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            font-family: "Inter";
+
+            .description {
+                color: $middle-light-gray;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .user-card-container {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
 }

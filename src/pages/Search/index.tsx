@@ -2,17 +2,46 @@ import { FC, ChangeEvent, useState, useEffect } from "react";
 
 import "./styles.scss";
 import * as I from "../../assets/icons";
+
 import BannerSectionLayout from "../../components/BannerSectionLayout";
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
 
+import { getUserBySearch } from "../../api/Users";
+import UserCard from "../../components/UserCard";
+
+import { UserCardProps } from "../../components/UserCard/types";
+
 const Search: FC = () => {
     const [search, setSearch] = useState("");
+    const [users, setUsers] = useState<Array<UserCardProps> | [] | null>([]);
 
     const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
 
         setSearch(value);
+    };
+
+    const getUser = async () => {
+        try {
+            const result = await getUserBySearch(search);
+
+            const user = {
+                id: result.data.node_id,
+                name: result.data.name,
+                description: result.data.bio,
+                img: result.data.avatar_url,
+            };
+
+            setUsers([user]);
+        } catch (e) {
+            setUsers(null);
+        }
+    };
+
+    const onClickSearch = () => {
+        if (!search) setUsers([]);
+        getUser();
     };
 
     return (
@@ -39,15 +68,43 @@ const Search: FC = () => {
                                 onChange={onChangeInput}
                                 placeholder="Ex.: Thauany"
                             />
-                            <CustomButton buttonType="submit" width={"200px"}>
+                            <CustomButton
+                                buttonType="submit"
+                                onClick={onClickSearch}
+                                width="200px"
+                            >
                                 <div className="search-button-content">
-                                    Buscar
+                                    <span>Buscar</span>
                                     <img src={I.search} alt="search icon" />
                                 </div>
                             </CustomButton>
                         </div>
 
-                        <div></div>
+                        <div>
+                            {users === null ? (
+                                <div>
+                                    Oops! Algo deu errado com a sua pesquisa.
+                                </div>
+                            ) : users.length ? (
+                                users.map(
+                                    ({
+                                        id,
+                                        name,
+                                        description,
+                                        img,
+                                    }: UserCardProps) => (
+                                        <UserCard
+                                            key={id}
+                                            name={name}
+                                            description={description}
+                                            img={img}
+                                        />
+                                    )
+                                )
+                            ) : (
+                                <div>Insira acima a pesquisa desejada</div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </BannerSectionLayout>
