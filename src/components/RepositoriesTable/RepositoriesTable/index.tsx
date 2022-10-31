@@ -2,13 +2,20 @@ import { FC } from "react";
 
 import TableRow from "../TableRow";
 
-import { RepositoriesTableProps } from "./types";
+import { RepositoriesTableProps, RepositoriesType } from "./types";
 
 const Repositories: FC<RepositoriesTableProps> = ({ repositories }) => (
     <div className="repositories-table-content">
-        {repositories.map(({ name, description, hasStar }: any) => (
-            <TableRow name={name} description={description} hasStar={hasStar} />
-        ))}
+        {repositories.map(
+            ({ id, name, description, hasStar }: RepositoriesType) => (
+                <TableRow
+                    key={id}
+                    name={name}
+                    description={description}
+                    hasStar={hasStar}
+                />
+            )
+        )}
     </div>
 );
 

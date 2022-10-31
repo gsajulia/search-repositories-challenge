@@ -8,3 +8,10 @@ export interface RepositoriesType {
     description: string;
     hasStar: boolean;
 }
+
+export interface UserType {
+    name: string;
+    description: string;
+    img: string;
+    id: string;
+}

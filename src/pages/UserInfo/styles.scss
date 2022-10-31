@@ -6,13 +6,42 @@
     min-height: 100vh;
     padding: 10%;
 
-    .user-info-button-container {
-        padding-bottom: 40px;
-    }
     .user-info-content {
         background: $primary-middle;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding: 5%;
+
+        .user-info-button-container {
+            padding-bottom: 10px;
+            align-self: flex-end;
+        }
+
+        .user-info-profile {
+            margin: 0 8% 4% 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                border-radius: 50%;
+                width: 174px;
+            }
+
+            .title {
+                padding-top: 40px;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 39px;
+                color: $white;
+            }
+
+            .description {
+                text-align: center;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                color: $middle-light-gray;
+            }
+        }
     }
 }

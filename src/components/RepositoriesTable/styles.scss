@@ -4,6 +4,7 @@
     position: relative;
     width: 100%;
     max-width: 1030px;
+
     .repositories-table {
         background: $table-color;
         width: 100%;
@@ -14,5 +15,51 @@
 
     .repositories-table-tabs {
         background: $table-color;
+        max-width: 60%;
+        color: $white;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+
+        div {
+            width: 50%;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            padding: 10px 0;
+            text-align: center;
+
+            span {
+                background-color: #454545;
+                border-radius: 50%;
+                font-size: 14px;
+                padding: 4px;
+                margin-left: 12px;
+            }
+        }
+    }
+
+    .content,
+    .active-tab-border {
+        margin: 0 10px 10px 10px;
+    }
+
+    .active-tab-border {
+        border-bottom: 2px solid rgba(159, 159, 159, 0.7);
+    }
+
+    .repositories-show-more {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: $white;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        padding-top: 63px;
+        cursor: pointer;
+        img {
+            padding-left: 8px;
+        }
     }
 }

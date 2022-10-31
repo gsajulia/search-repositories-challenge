@@ -7,6 +7,7 @@ import uolBall from "./uol-ball.svg";
 import search from "./search.svg";
 import star from "./star.svg";
 import goldenStar from "./golden-star.svg";
+import downArrow from "./down-arrow.svg";
 
 export {
     userIcon,
@@ -18,4 +19,5 @@ export {
     search,
     star,
     goldenStar,
+    downArrow,
 };
