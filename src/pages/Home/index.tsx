@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import MobileFooter from "../../components/Footer/MobileFooter";
@@ -21,6 +21,11 @@ const mission = [
     },
 ];
 const Home: FC = () => { 
+
+    useEffect(() => {
+        document.title = "Compass - Home"
+    }, [])
+
     return (
         <div className="home-container home-mobile">
             <Header />
