@@ -5,8 +5,8 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
-    overflow-y: hidden;
     justify-content: flex-end;
+    overflow-y: hidden;
 
     .content {
         display: flex;
@@ -34,6 +34,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    cursor: pointer;
 }
 
 .mobile-logo,
@@ -74,8 +75,8 @@
 
     .mobile-logo {
         width: 349px;
-        padding-top: 33px;
         display: inline;
+        margin-top: 40px !important;
     }
 
     .no-mobile-logo {

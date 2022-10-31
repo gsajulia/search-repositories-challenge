@@ -8,7 +8,7 @@ export interface RepositoriesType {
 export interface RepositoriesTableProps {
     repositories: Array<RepositoriesType> | [];
     starredRepositories: Array<RepositoriesType> | [];
-    viewMore: () => void;
+    viewMore: (tabs: number) => void;
     setActualRepositories: any;
     actualRepositories: Array<RepositoriesType> | [];
 }

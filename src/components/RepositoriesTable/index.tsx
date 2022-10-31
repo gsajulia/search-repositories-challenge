@@ -29,6 +29,8 @@ const RepositoriesTable: FC<RepositoriesTableProps> = ({
                 hasStar: !!repo[i].hasStar,
             });
         }
+
+        return tempRepos;
     };
 
     const returnTwoDigits = (length: number) => {
@@ -75,7 +77,7 @@ const RepositoriesTable: FC<RepositoriesTableProps> = ({
                 <div
                     className="repositories-show-more"
                     onClick={() => {
-                        viewMore();
+                        viewMore(tabs);
                         setShowMore(false);
                     }}
                 >

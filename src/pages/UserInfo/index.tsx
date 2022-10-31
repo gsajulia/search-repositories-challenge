@@ -82,8 +82,9 @@ const UserInfo: FC = () => {
         }
     };
 
-    const viewMore = () => {
-        setActualRepositories(repositories);
+    const viewMore = (tabs: number) => {
+        if (tabs === 0) setActualRepositories(repositories);
+        else setActualRepositories(starredRepositories);
     };
 
     useEffect(() => {
