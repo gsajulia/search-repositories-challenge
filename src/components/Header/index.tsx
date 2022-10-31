@@ -31,11 +31,11 @@ const Header: FC = () => {
           setStatus('Carregando...');
           navigator.geolocation.getCurrentPosition((position) => {
             setStatus(null);
-            if(process.env.REACT_APP_WHETHER_TOKEN === undefined){
+            if(process.env.REACT_APP_CLIMATE_TOKEN === undefined){
                 setStatus('Algo deu errado em ver o clima...');
                 return
             }
-            getWetherInfo(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WHETHER_TOKEN}&q=${position.coords.latitude},${position.coords.longitude}&aqi=no`)
+            getWetherInfo(`https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_CLIMATE_TOKEN}&q=${position.coords.latitude},${position.coords.longitude}&aqi=no`)
             console.log(position.coords.latitude);
             console.log(position.coords.longitude);
           }, () => {
