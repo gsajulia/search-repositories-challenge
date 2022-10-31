@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-
-import FormSection from "./index";
-import * as D from "../mock.data";
+import Header from "./Header/index";
+import FormSection from "./FormSection/index";
+import * as D from "./mock.data";
 
 describe("<FormSection /> from login", () => {
     it("should call onChange function on each key pressed", () => {
@@ -44,5 +44,20 @@ describe("<FormSection /> from login", () => {
             "Ops, usuário ou senha inválidos. Tente novamente!"
         );
         expect(error).toBeInTheDocument();
+    });
+});
+
+describe("<Header /> from login", () => {
+    it("should render the text of header", () => {
+        render(<Header />);
+
+        expect.assertions(2);
+        const title = screen.getByText("Olá,");
+        const subtitle = screen.getByText(
+            "Para continuar navegando de forma segura, efetue o login na rede."
+        );
+
+        expect(title).toBeInTheDocument();
+        expect(subtitle).toBeInTheDocument();
     });
 });
