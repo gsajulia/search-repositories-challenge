@@ -104,12 +104,15 @@ const UserInfo: FC = () => {
                         <>Voltar</>
                     </CustomButton>
                 </div>
-                <div className="row">
+                <div className="user-info-left-section">
                     <div className="user-info-profile">
                         <img src={user?.img} alt="profile photo" />
-
-                        <div className="title">{user?.name}</div>
-                        <div className="description">{user?.description}</div>
+                        <div className="user-info-profile-text">
+                            <div className="title">{user?.name}</div>
+                            <div className="description">
+                                {user?.description}
+                            </div>
+                        </div>
                     </div>
                     <RepositoriesTable
                         starredRepositories={starredRepositories}

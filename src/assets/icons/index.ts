@@ -8,6 +8,7 @@ import search from "./search.svg";
 import star from "./star.svg";
 import goldenStar from "./golden-star.svg";
 import downArrow from "./down-arrow.svg";
+import share from "./share.svg";
 
 export {
     userIcon,
@@ -20,4 +21,5 @@ export {
     star,
     goldenStar,
     downArrow,
+    share,
 };

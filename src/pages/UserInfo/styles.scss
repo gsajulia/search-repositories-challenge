@@ -12,6 +12,11 @@
         flex-direction: column;
         padding: 5%;
 
+        .user-info-left-section {
+            display: flex;
+            flex-direction: row;
+        }
+
         .user-info-button-container {
             padding-bottom: 10px;
             align-self: flex-end;
@@ -25,6 +30,12 @@
             img {
                 border-radius: 50%;
                 width: 174px;
+            }
+
+            .user-info-profile-text {
+                div {
+                    text-align: center;
+                }
             }
 
             .title {
@@ -41,6 +52,38 @@
                 font-size: 20px;
                 line-height: 24px;
                 color: $middle-light-gray;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .user-info-container {
+        padding: 0;
+        overflow-y: scroll;
+        .user-info-content {
+            background: none;
+            .user-info-left-section {
+                flex-direction: column;
+            }
+
+            .user-info-button-container {
+                align-self: flex-start;
+                margin-bottom: 12px;
+            }
+
+            .user-info-profile {
+                align-items: space-between;
+                flex-direction: row;
+                padding-bottom: 12px;
+                .user-info-profile-text {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 5%;
+                    div {
+                        text-align: start;
+                    }
+                }
             }
         }
     }

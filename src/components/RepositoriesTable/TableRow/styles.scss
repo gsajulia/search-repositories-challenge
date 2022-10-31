@@ -30,9 +30,17 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        img {
+        .star {
             width: 24px;
             padding-right: 24px;
+        }
+        .repositories-button-share {
+            img {
+                display: none;
+            }
+            .share {
+                width: 15px;
+            }
         }
 
         span {
@@ -47,6 +55,18 @@
     .left-column {
         .subtitle:last-child {
             margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .repositories-button-share {
+        width: 44px;
+        img {
+            display: inline !important;
+        }
+        span {
+            display: none !important;
         }
     }
 }

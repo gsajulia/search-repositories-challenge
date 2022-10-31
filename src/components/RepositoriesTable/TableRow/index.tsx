@@ -15,9 +15,12 @@ const TableRow: FC<TableRowProps> = ({ name, description, hasStar }) => {
             </div>
 
             <div className="right-column">
-                <img src={hasStar ? I.goldenStar : I.star} />
+                <img className="star" src={hasStar ? I.goldenStar : I.star} />
                 <CustomButton buttonType="see-more-button">
-                    <span>Compartilhar</span>
+                    <div className="repositories-button-share">
+                        <span>Compartilhar</span>
+                        <img className="share" src={I.share} alt="share icon" />
+                    </div>
                 </CustomButton>
             </div>
         </div>
