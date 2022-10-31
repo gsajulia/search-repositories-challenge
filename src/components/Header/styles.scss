@@ -30,7 +30,7 @@
     .climate-content-container {
         display: flex;
         flex-direction: row;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         gap: 15px;
         min-width: 200px;
@@ -39,7 +39,7 @@
     .climate-text {
         font-weight: 400;
         font-size: 14px;
-        text-align: end;
+        text-align: flex-end;
         padding-right: 10px;
     }
 

@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import * as I from "../../assets/icons";
 import "./styles.scss";
 
 const Footer: FC = () => {
@@ -23,7 +22,7 @@ const Footer: FC = () => {
 
                 <div className="button-links-container">
                     <div className="secondary-link">
-                        <Link to="">Acessar Busca</Link>
+                        <Link to="/search">Acessar Busca</Link>
                     </div>
                     <div className="primary-link">
                         <Link to="">Logout</Link>
