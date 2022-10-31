@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../utils";
 import "./styles.scss";
 
@@ -7,6 +7,7 @@ import { useLogout } from "../../context/LogoutContext";
 
 const Footer: FC = () => {
     const { timer } = useLogout();
+    const navigate = useNavigate();
 
     return (
         <footer className="footer-container">
@@ -31,7 +32,13 @@ const Footer: FC = () => {
                     <div className="secondary-link">
                         <Link to="/search">Acessar Busca</Link>
                     </div>
-                    <div onClick={() => logout()} className="primary-link">
+                    <div
+                        onClick={() => {
+                            logout();
+                            navigate("/", { replace: true });
+                        }}
+                        className="primary-link"
+                    >
                         <Link to="">Logout</Link>
                     </div>
                 </div>

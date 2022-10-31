@@ -1,51 +1,53 @@
-import { createContext, useState, useContext, useEffect } from 'react'
-import { logout } from '../utils';
+import { createContext, useState, useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../utils";
 
 interface LogoutType {
-  timer: number;
-};
+    timer: number;
+}
 
-const initialTime = 600000
-export const LogoutContext = createContext<LogoutType>({timer: initialTime})
+const initialTime = 600000;
+export const LogoutContext = createContext<LogoutType>({ timer: initialTime });
 
-const LogoutProvider =  ({ children }: { children: JSX.Element })  => {
-    const [timer, setTimer] = useState(initialTime)
+const LogoutProvider = ({ children }: { children: JSX.Element }) => {
+    const [timer, setTimer] = useState(initialTime);
+    const navigate = useNavigate();
 
     useEffect(() => {
-      const timer = setTimeout(() => {
-        console.log('This will run after 1 second!')
-        setTimer(initialTime)
-        logout()
-      }, initialTime); 
+        const timer = setTimeout(() => {
+            console.log("This will run after 1 second!");
+            setTimer(initialTime);
+            logout();
+            navigate("/", { replace: true });
+        }, initialTime);
 
-      return () => clearTimeout(timer);
+        return () => clearTimeout(timer);
     }, []);
 
-
     useEffect(() => {
-      timer > 0 && setTimeout(() => setTimer(timer - 1000), 1000);
+        timer > 0 && setTimeout(() => setTimer(timer - 1000), 1000);
     }, [timer]);
 
     return (
         <LogoutContext.Provider
             value={{
-              timer
+                timer,
             }}
         >
             {children}
         </LogoutContext.Provider>
-    )
-}
+    );
+};
 
 export function useLogout() {
-    const context = useContext(LogoutContext)
+    const context = useContext(LogoutContext);
     if (!context) {
-        throw new Error('useMap must be used within a LogoutProvider')
+        throw new Error("useMap must be used within a LogoutProvider");
     }
-    const { timer } = context
+    const { timer } = context;
     return {
-      timer
-    }
+        timer,
+    };
 }
 
 export default LogoutProvider;

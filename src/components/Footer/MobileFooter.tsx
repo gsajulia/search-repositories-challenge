@@ -1,13 +1,20 @@
 import { FC } from "react";
 import "./styles.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../utils";
 
 const MobileFooter: FC = () => {
+    const navigate = useNavigate();
     return (
         <footer className="footer-mobile">
             <div className="button-links-container">
-                <div onClick={() => logout()} className="primary-link">
+                <div
+                    onClick={() => {
+                        logout();
+                        navigate("/", { replace: true });
+                    }}
+                    className="primary-link"
+                >
                     <Link to="">Logout</Link>
                 </div>
                 <div className="secondary-link">
