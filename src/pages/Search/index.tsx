@@ -62,12 +62,14 @@ const Search: FC = () => {
                         </div>
 
                         <div className="search-section">
-                            <CustomInput
-                                id="input-search-repositories"
-                                value={search}
-                                onChange={onChangeInput}
-                                placeholder="Ex.: Thauany"
-                            />
+                            <section>
+                                <CustomInput
+                                    id="input-search-repositories"
+                                    value={search}
+                                    onChange={onChangeInput}
+                                    placeholder="Ex.: Thauany"
+                                />
+                            </section>
                             <CustomButton
                                 buttonType="submit"
                                 onClick={onClickSearch}

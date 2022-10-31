@@ -1,8 +1,6 @@
 @import "../../../assets/scss/variables.scss";
 .repositories-table-row {
     border-collapse: collapse;
-    border-bottom: 1px solid $middle-light-gray;
-    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     .left-column {

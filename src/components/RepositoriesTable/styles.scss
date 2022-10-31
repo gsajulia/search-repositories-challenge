@@ -25,14 +25,14 @@
             font-weight: 500;
             font-size: 18px;
             line-height: 27px;
-            // margin: 10px 0;
+            height: 40px;
             text-align: center;
 
             span {
                 background-color: #454545;
                 border-radius: 50%;
                 font-size: 14px;
-                padding: 4px;
+                padding: 4px 6px;
                 margin-left: 12px;
             }
         }
@@ -40,8 +40,12 @@
 
     .content,
     .active-tab-border {
-        padding: 0 10px 10px 10px;
+        padding: 10px 10px 0 10px;
         background: $table-color;
+    }
+
+    .content {
+        border-bottom: 2px solid $table-color !important;
     }
 
     .active-tab-border {
@@ -84,6 +88,6 @@
 
 @media (max-width: $breakpoint-mobile) {
     .repositories-table-tabs {
-        max-width: 70% !important;
+        max-width: 80% !important;
     }
 }

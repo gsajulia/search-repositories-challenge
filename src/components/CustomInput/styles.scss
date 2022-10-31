@@ -21,6 +21,13 @@
         font-size: 30px;
     }
 
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        background: $middle-gray;
+    }
+
     input {
         color: $secondary;
         border: none;

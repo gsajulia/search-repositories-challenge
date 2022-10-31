@@ -23,10 +23,15 @@
     width: 50%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     text-align: right;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+
+    p {
+        max-width: 541px;
+    }
 }
 
 .end-section {
