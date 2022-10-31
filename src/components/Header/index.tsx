@@ -22,7 +22,7 @@ const Header: FC = () => {
         try {
             const { data } = await getWether(url);
             console.log(data);
-            const matches = data.location.region.match(/\b(\w)/g); // ['J','S','O','N']
+            const matches = data.location.region.match(/\b(\w)/g);
             const state = matches.join("");
             const location = `${data.location.name} - ${state}`;
             setWetherInfo({

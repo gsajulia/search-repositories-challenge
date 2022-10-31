@@ -102,9 +102,7 @@ const Search: FC = () => {
                                         />
                                     )
                                 )
-                            ) : (
-                                <div>Insira acima a pesquisa desejada</div>
-                            )}
+                            ) : null}
                         </div>
                     </div>
                 </div>

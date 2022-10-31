@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import UserInfo from "./pages/UserInfo";
 import PrivateRoute from "./routes/PrivateRoute";
+import Error from "./pages/Error";
 
 import LogoutProvider from "./context/LogoutContext";
 
@@ -47,7 +48,16 @@ const App = () => {
                     </PrivateRoute>
                 }
             />
-            {/* <Route path='*' element={<NotFound />} /> */}
+            <Route
+                path="*"
+                element={
+                    <Error
+                        error="404"
+                        text="Esta página não existe. 
+                Vamos encontrar um lugar melhor para você ir."
+                    />
+                }
+            />
         </Routes>
     );
 };

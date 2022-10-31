@@ -1,9 +1,15 @@
-import { Navigate } from "react-router-dom";
 import { isLogged } from "../utils";
+import Error from "../pages/Error";
 
 const PrivateRoute = ({ children }: { children: JSX.Element }) => {
     if (!isLogged()) {
-        return <Navigate to="/" replace />;
+        return (
+            <Error
+                error="401"
+                text="Esta página não existe. 
+                Vamos encontrar um lugar melhor para você ir."
+            />
+        );
     }
 
     return children;
