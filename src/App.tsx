@@ -6,6 +6,9 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import UserInfo from "./pages/UserInfo";
+import PrivateRoute from "./routes/PrivateRoute";
+
+import LogoutProvider from "./context/LogoutContext";
 
 const App = () => {
     return (
@@ -13,7 +16,7 @@ const App = () => {
             <Route
                 path="/"
                 element={
-                    <PublicRoute>
+                    <PublicRoute restricted>
                         <Login />
                     </PublicRoute>
                 }
@@ -21,25 +24,27 @@ const App = () => {
             <Route
                 path="/home"
                 element={
-                    <PublicRoute>
-                        <Home />
-                    </PublicRoute>
+                    <PrivateRoute>
+                        <LogoutProvider>
+                            <Home />
+                        </LogoutProvider>
+                    </PrivateRoute>
                 }
             />
             <Route
                 path="/search"
                 element={
-                    <PublicRoute>
+                    <PrivateRoute>
                         <Search />
-                    </PublicRoute>
+                    </PrivateRoute>
                 }
             />
             <Route
                 path="/user-info/:username"
                 element={
-                    <PublicRoute>
+                    <PrivateRoute>
                         <UserInfo />
-                    </PublicRoute>
+                    </PrivateRoute>
                 }
             />
             {/* <Route path='*' element={<NotFound />} /> */}

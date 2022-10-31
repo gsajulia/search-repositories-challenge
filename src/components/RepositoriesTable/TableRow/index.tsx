@@ -1,4 +1,4 @@
-import { FC, ChangeEvent, useState, useEffect } from "react";
+import { FC } from "react";
 
 import "./styles.scss";
 import * as I from "../../../assets/icons";

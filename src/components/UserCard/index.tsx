@@ -1,4 +1,4 @@
-import { FC, ChangeEvent, useState, useEffect } from "react";
+import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import "./styles.scss";
 import * as I from "../../assets/icons";

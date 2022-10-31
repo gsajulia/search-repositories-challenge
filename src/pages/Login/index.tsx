@@ -27,8 +27,10 @@ const Login: FC = () => {
     };
 
     const onSubmit = () => {
-        if (login.user === "admin" && login.password === "admin")
+        if (login.user === "admin" && login.password === "admin") {
             navigate("/home");
+            localStorage.setItem("user",JSON.stringify(login.user));
+        }
         else setError(true);
     };
 

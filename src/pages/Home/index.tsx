@@ -7,18 +7,20 @@ import "./styles.scss";
 import * as I from "../../assets/icons";
 
 const mission = [
-    { title: "Our mission is", subtitle: "Nossa missão é" },
-    { title: "to transform the world", subtitle: "transformar o mundo" },
+    { id: 0, title: "Our mission is", subtitle: "Nossa missão é" },
+    { id: 1, title: "to transform the world", subtitle: "transformar o mundo" },
     {
+        id: 2, 
         title: "building digital experiences",
         subtitle: "construindo experiências digitais",
     },
     {
+        id: 3, 
         title: "that enable our client’s growth",
         subtitle: "que permitam o crescimento dos nossos clientes",
     },
 ];
-const Home: FC = () => {
+const Home: FC = () => { 
     return (
         <div className="home-container home-mobile">
             <Header />
@@ -26,8 +28,8 @@ const Home: FC = () => {
                 <div className="home-content">
                     <img src={I.uolBall} alt="oul ball" />
                     <div className="mission">
-                        {mission.map(({ title, subtitle }, idx) => (
-                            <>
+                        {mission.map(({ id, title, subtitle }, idx) => (
+                            <div key={id}>
                                 <div
                                     className={
                                         idx === 0
@@ -40,7 +42,7 @@ const Home: FC = () => {
                                 <div className="mission-subtitle">
                                     {subtitle}
                                 </div>
-                            </>
+                            </div>
                         ))}
                     </div>
                 </div>

@@ -1,8 +1,13 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import { logout } from "../../utils";
 import "./styles.scss";
 
+import { useLogout } from "../../context/LogoutContext";
+
 const Footer: FC = () => {
+    const {timer} = useLogout()
+    
     return (
         <footer className="footer-container">
             <section className="begin-section">
@@ -15,7 +20,7 @@ const Footer: FC = () => {
                 <div className="refresh-text">
                     <div>Application refresh in</div>
                     <div className="seconds-text">
-                        600
+                        {timer/1000}
                         <div>seconds</div>
                     </div>
                 </div>
@@ -24,7 +29,7 @@ const Footer: FC = () => {
                     <div className="secondary-link">
                         <Link to="/search">Acessar Busca</Link>
                     </div>
-                    <div className="primary-link">
+                    <div onClick={()=> logout()} className="primary-link">
                         <Link to="">Logout</Link>
                     </div>
                 </div>
